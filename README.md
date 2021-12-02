@@ -69,7 +69,10 @@ node dist/client.js
 ### Web
 
 With use of https://github.com/fgmnts/grpc-demo/ you can replace the ts-server 
-and update the webapp.js and client.js
+and update the webapp.js and client.js  
+
+Remember to rebuild containers after code change  
+
 
 ```
 docker-compose build node-server
