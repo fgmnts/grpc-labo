@@ -19,6 +19,8 @@ Serverstream to get all 'spots' of bird
  - req: bird id
  - res: stream of every spotted bird + the location
 
+### Use nested types for location
+https://developers.google.com/protocol-buffers/docs/proto3#nested
 
 ## STEPS
 
