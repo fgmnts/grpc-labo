@@ -4,7 +4,6 @@ import { AdditionServer, AdditionService, AddRequest, NumberMessage } from '../m
 import { logger, ServiceError } from '../utils';
 
 /**
- * package helloworld
  * service Addition
  */
 class Addition implements AdditionServer {
@@ -20,10 +19,6 @@ class Addition implements AdditionServer {
     const { a, b } = call.request;
     logger.info('add2NumbersName:', a, b);
 
-    /*if (name === 'error') {
-        // https://grpc.io/grpc/node/grpc.html#.status__anchor
-        return callback(new ServiceError(status.INVALID_ARGUMENT, 'InvalidValue'), null);
-      }*/
     res.val = a + b;
     callback(null, NumberMessage.fromJSON(res));
   }
@@ -36,7 +31,6 @@ class Addition implements AdditionServer {
       .on('data', (req: NumberMessage) => {
         sum += req.val;
         logger.info('adding:', req.val, 'total:', sum);
-        //data.push(`${req.name} - ${randomBytes(5).toString('hex')}`);
       })
       .on('end', () => {
         callback(
